@@ -9,7 +9,9 @@
 
         <p>Total Games Played: {{ plays }}</p>
         <p class="mb-5">Total Points: {{points }}</p>
+        <a href="{% url 'game' %}">
         <button type="button" class=" text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">START GAME</button>
+        </a>
     </div>
 </div>
 
