@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="grid place-items-center h-screen font-semibold ">
+    <div class="text-center">
+        <h2 class="text-xl mb-4">Question {{ current_index }} of {{ total_questions }}</h2>
+        <p class="mb-4">{{ question.text }}</p>
+
+        <div class="space-y-2">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="question_id" value="{{ question.id }}">
+            {% for choice in choices %}
+                <button type="submit" name="selected_answer" value="{{ choice }}" class="w-1/2 py-2 bg-blue-700 text-white rounded hover:bg-blue-600 mb-3 p-1">
+                    {{ choice }}
+                </button>
+            {% endfor %}
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

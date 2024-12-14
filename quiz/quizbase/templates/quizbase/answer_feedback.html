@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="grid place-items-center h-screen font-semibold ">
+    <div class="text-center">
+        <h2 class="text-xl mb-4">Feedback</h2>
+
+        {% if is_correct %}
+            <p class="text-green-950 text-xl">Correct! Well done.</p>
+        {% else %}
+            <p class="text-red-900 text-xl">Wrong! The correct answer is: {{ correct_answer }}.</p>
+        {% endif %}
+
+        <p class="font-light">Redirecting to next question...</p>
+
+        <meta http-equiv="refresh" content="1; url={% url 'game' %}">
+    </div>
+</div>
+        {% endblock %}
+
