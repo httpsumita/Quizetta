@@ -15,7 +15,7 @@ Deployment: Docker and AWS EC2 compatible
 Version Control: Git and GitHub
 
 
-# Installation and Setup##
+# Installation and Setup
 Follow these steps to clone and run the Quizetta app on your local machine.
 
 ## Prerequisites
